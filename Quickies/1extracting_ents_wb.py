@@ -7,7 +7,7 @@ def url_to_text(url):
   soup = BeautifulSoup(html, 'html5lib')
   for script in soup(["script", "style", 'aside']):
     script.extract()
-    text = soup.get_text()
+  text = soup.get_text()
   return " ".join(text.split())
 
 article = url_to_text("https://eu.usatoday.com/story/news/nation/2022/02/01/fertilizer-plant-fire-explosions-winston-salem-evacuations/9295905002/")
